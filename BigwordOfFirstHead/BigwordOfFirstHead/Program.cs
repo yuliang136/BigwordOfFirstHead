@@ -10,18 +10,10 @@ namespace BigwordOfFirstHead
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(Shout());
 
-            //
+            Dog dog = new Dog("hehe") {ShoutNum = 10};
 
-            //Cat cat = new Cat();
-
-            Cat cat; // 声明一个变量 指针.
-            cat = new Cat(); // 开辟内存.
-            cat.ShoutNum = 10;
-
-            Console.WriteLine(cat.Shout());
+            Console.WriteLine(dog.Shout());
         }
-
     }
 }

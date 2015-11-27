@@ -16,7 +16,7 @@ namespace BigwordOfFirstHead
         {
         }
 
-        public string Shout()
+        public override string Shout()
         {
             string result = "";
 

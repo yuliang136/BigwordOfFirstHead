@@ -25,7 +25,7 @@ namespace BigwordOfFirstHead
             // 这里由base Animal构造函数处理.
         }
 
-        public string Shout()
+        public override string Shout()
         {
             string result = "";
 

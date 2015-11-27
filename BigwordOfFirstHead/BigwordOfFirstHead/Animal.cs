@@ -27,5 +27,10 @@ namespace BigwordOfFirstHead
             get { return _nShoutNum; }
             set { _nShoutNum = value; }
         }
+
+        public virtual string Shout()
+        {
+            return "";
+        }
     }
 }

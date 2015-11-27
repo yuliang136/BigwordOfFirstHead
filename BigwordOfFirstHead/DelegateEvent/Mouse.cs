@@ -15,9 +15,9 @@ namespace DelegateEvent
             _strName = strName;
         }
 
-        public void Run()
+        public void Run(object sender, CatShoutEventArgs args)
         {
-            Console.WriteLine("老猫来了, {0}快跑！ ", _strName);
+            Console.WriteLine("老猫{0}来了, {1}快跑！ ", args.StrName,_strName);
         }
     }
 }

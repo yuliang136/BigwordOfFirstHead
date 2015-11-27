@@ -15,11 +15,10 @@ namespace DelegateEvent
             _strName = strName;
         }
 
-        //public delegate void CatShoutEventHandler();
+        public delegate void CatShoutEventHandler(object sender, CatShoutEventArgs args);
+        public event CatShoutEventHandler _eventCatShout;
 
-        //public event CatShoutEventHandler _eventCatShout;
-
-        public Action _eventCatShout;
+        // public Action _eventCatShout;
 
         public void Shout()
         {
@@ -27,7 +26,8 @@ namespace DelegateEvent
 
             if (_eventCatShout != null)
             {
-                _eventCatShout();
+                CatShoutEventArgs e = new CatShoutEventArgs {StrName = this._strName};
+                _eventCatShout(this,e);
             }
         }
     }

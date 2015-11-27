@@ -45,9 +45,13 @@
     <Compile Include="Cat.cs" />
     <Compile Include="Cattle.cs" />
     <Compile Include="Dog.cs" />
+    <Compile Include="IChange.cs" />
+    <Compile Include="MachineCat.cs" />
+    <Compile Include="Monkey.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sheep.cs" />
+    <Compile Include="StoneMonkey.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

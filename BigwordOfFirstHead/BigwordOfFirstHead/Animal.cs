@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BigwordOfFirstHead
 {
-    class Animal
+    abstract class Animal
     {
         protected string _strName = "";
 
@@ -39,9 +39,6 @@ namespace BigwordOfFirstHead
             return "My name is " + _strName + " " + result;
         }
 
-        protected virtual string getShoutSound()
-        {
-            return "";
-        }
+        protected abstract string getShoutSound();
     }
 }

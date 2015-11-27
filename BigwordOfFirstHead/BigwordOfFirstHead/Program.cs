@@ -21,9 +21,9 @@ namespace BigwordOfFirstHead
             {
                 new Cat("小花"),
                 new Dog("阿毛"),
-                new Dog("小黑"),
+                new Cattle("小黑"),
                 new Cat("娇娇"),
-                new Cat("咪咪")
+                new Sheep("咪咪")
             };
 
             foreach (var item in arrayAnimal)

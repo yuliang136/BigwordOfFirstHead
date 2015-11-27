@@ -25,17 +25,9 @@ namespace BigwordOfFirstHead
             // 这里由base Animal构造函数处理.
         }
 
-        public override string Shout()
+        protected override string getShoutSound()
         {
-            string result = "";
-
-            for (int i = 0; i < _nShoutNum; i++)
-            {
-                result += "喵， ";
-            }
-
-            return "My name is " + _strName + " " + result;
+            return "Miao";
         }
-
     }
 }

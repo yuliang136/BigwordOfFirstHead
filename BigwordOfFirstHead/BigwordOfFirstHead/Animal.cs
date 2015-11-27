@@ -28,7 +28,18 @@ namespace BigwordOfFirstHead
             set { _nShoutNum = value; }
         }
 
-        public virtual string Shout()
+        public string Shout()
+        {
+            string result = "";
+            for (int i = 0; i < _nShoutNum; i++)
+            {
+                result += getShoutSound() + ", ";
+            }
+
+            return "My name is " + _strName + " " + result;
+        }
+
+        protected virtual string getShoutSound()
         {
             return "";
         }

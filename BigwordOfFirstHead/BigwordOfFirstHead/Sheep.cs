@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace BigwordOfFirstHead
 {
-    class Dog : Animal
+    class Sheep : Animal
     {
-        public Dog() : base()
+        public Sheep()
         {
         }
 
-        public Dog(string strName) : base(strName)
+        public Sheep(string strName) : base(strName)
         {
         }
 
         protected override string getShoutSound()
         {
-            return "Wang";
+            return "MieMie";
         }
     }
 }

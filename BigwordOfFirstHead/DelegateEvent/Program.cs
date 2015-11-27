@@ -14,8 +14,8 @@ namespace DelegateEvent
             Mouse mouse1 = new Mouse("Jerry");
             Mouse mouse2 = new Mouse("Jack");
 
-            cat._eventCatShout += new Cat.CatShoutEventHandler(mouse1.Run);
-            cat._eventCatShout += new Cat.CatShoutEventHandler(mouse2.Run);
+            cat._eventCatShout += mouse1.Run;
+            cat._eventCatShout += mouse2.Run;
 
             cat.Shout();
         }

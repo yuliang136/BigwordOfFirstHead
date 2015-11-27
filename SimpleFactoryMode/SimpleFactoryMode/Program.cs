@@ -16,12 +16,20 @@ namespace SimpleFactoryMode
             string _strSecondNum = Console.ReadLine();
             string _strResult = "";
             
-            // 调用业务层处理.
-            _strResult = Convert.ToString(Operation.GetResult(Convert.ToDouble(_strFirstNum),
-                                            Convert.ToDouble(_strSecondNum),
-                                            _strOperation));
+            //// 调用业务层处理.
+            //_strResult = Convert.ToString(Operation.GetResult(Convert.ToDouble(_strFirstNum),
+            //                                Convert.ToDouble(_strSecondNum),
+            //                                _strOperation));
 
-            Console.WriteLine("Reuslt is {0}", _strResult);
+            Operation oper;
+            oper = OperationFactory.createOperate(_strOperation);
+
+            oper.NumberA = Convert.ToDouble(_strFirstNum);
+            oper.NumberB = Convert.ToDouble(_strSecondNum);
+
+            double result = oper.GetResult();
+
+            Console.WriteLine("Reuslt is {0}", result);
         }
     }
 }

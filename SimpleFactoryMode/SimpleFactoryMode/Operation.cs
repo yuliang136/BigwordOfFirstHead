@@ -25,31 +25,5 @@ namespace SimpleFactoryMode
 
         // 使得Operation没有实例 必须由继承类去实现.
         public abstract double GetResult();
-
-
-        //public static double GetResult(double numberA, double numberB, string operate)
-        //{
-        //    double _dResult = 0.0;
-
-        //    switch (operate)
-        //    {
-        //        case "+":
-        //            _dResult = numberA + numberB;
-        //            break;
-        //        case "-":
-        //            _dResult = numberA - numberB;
-        //            break;
-        //        case "*":
-        //            _dResult = numberA * numberB;
-        //            break;
-        //        case "/":
-        //            _dResult = numberA / numberB;
-        //            break;
-
-        //    }
-
-
-        //    return _dResult;
-        //}
     }
 }

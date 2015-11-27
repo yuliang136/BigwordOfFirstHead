@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,21 +34,39 @@ namespace BigwordOfFirstHead
 
             // 利用接口来调用对象.
 
-            MachineCat mcat = new MachineCat("叮当");
-            StoneMonkey wukong = new StoneMonkey("孙");
+            //MachineCat mcat = new MachineCat("叮当");
+            //StoneMonkey wukong = new StoneMonkey("孙");
 
-            IChange[] array = new IChange[2];
+            //IChange[] array = new IChange[2];
 
-            array[0] = mcat;  // 接口指针指向对象时 只能使用对象里实现的接口方法.
-            array[1] = wukong;
+            //array[0] = mcat;  // 接口指针指向对象时 只能使用对象里实现的接口方法.
+            //array[1] = wukong;
 
-            //foreach (var item in array)
-            //{
-            //    Console.WriteLine(item.ChangeThing());
-            //}
+            ////foreach (var item in array)
+            ////{
+            ////    Console.WriteLine(item.ChangeThing());
+            ////}
 
-            Console.WriteLine(array[0].ChangeThing("各种各样的东西! "));
-            Console.WriteLine(array[1].ChangeThing("各种各样的东西! "));
+            //Console.WriteLine(array[0].ChangeThing("各种各样的东西! "));
+            //Console.WriteLine(array[1].ChangeThing("各种各样的东西! "));
+
+            // 声明一个集合变量. 可以用接口IList 也可以直接声明ArrayList.
+            //IList arrayAnimal;
+            //arrayAnimal = new ArrayList();
+
+            List<Animal> arrayAnimal = new List<Animal>();
+
+            arrayAnimal.Add(new Cat("小花"));
+            arrayAnimal.Add(new Dog("阿毛"));
+
+            foreach (Animal item in arrayAnimal)
+            {
+                Console.WriteLine(item.Shout());
+            }
+
+            
+
+            //arrayAnimal.
 
         }
     }

@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CashFactory.cs" />
+    <Compile Include="CashNormal.cs" />
+    <Compile Include="CashRebate.cs" />
+    <Compile Include="CashReturn.cs" />
+    <Compile Include="CashSuper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblResult = new System.Windows.Forms.Label();
             this.lbxList = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbxType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtPrice
@@ -65,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 108);
+            this.label2.Location = new System.Drawing.Point(47, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 3;
@@ -113,16 +115,40 @@
             // 
             this.lbxList.FormattingEnabled = true;
             this.lbxList.ItemHeight = 15;
-            this.lbxList.Location = new System.Drawing.Point(50, 160);
+            this.lbxList.Location = new System.Drawing.Point(50, 205);
             this.lbxList.Name = "lbxList";
-            this.lbxList.Size = new System.Drawing.Size(394, 229);
+            this.lbxList.Size = new System.Drawing.Size(813, 184);
             this.lbxList.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 153);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "计算方式";
+            // 
+            // cbxType
+            // 
+            this.cbxType.FormattingEnabled = true;
+            this.cbxType.Items.AddRange(new object[] {
+            "正常收费",
+            "满300返100",
+            "打8折"});
+            this.cbxType.Location = new System.Drawing.Point(139, 144);
+            this.cbxType.Name = "cbxType";
+            this.cbxType.Size = new System.Drawing.Size(140, 23);
+            this.cbxType.TabIndex = 10;
+            this.cbxType.Text = "正常收费";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(530, 487);
+            this.ClientSize = new System.Drawing.Size(898, 487);
+            this.Controls.Add(this.cbxType);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lbxList);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label3);
@@ -150,6 +176,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.ListBox lbxList;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbxType;
     }
 }
 

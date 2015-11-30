@@ -30,5 +30,15 @@ namespace DuckStrategy
         {
             _flyBehavior.fly();
         }
+
+        public void SetFlyBehavior(IFlyBehavior fb)
+        {
+            _flyBehavior = fb;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior qb)
+        {
+            _quackBehavior = qb;
+        }
     }
 }

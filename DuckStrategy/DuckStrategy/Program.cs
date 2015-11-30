@@ -10,7 +10,13 @@ namespace DuckStrategy
     {
         static void Main(string[] args)
         {
-            Duck mallard = new MallardDuck();
+            Duck mallard = new ModelDuck();
+
+            mallard.performQuack();
+            mallard.performFly();
+
+            mallard.SetFlyBehavior(new FlyRocketPowered());
+            mallard.SetQuackBehavior(new Squeak());
 
             mallard.performQuack();
             mallard.performFly();

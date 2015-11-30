@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace DuckStrategy
 {
-    public interface IQuackBehavior
+    class Squeak:IQuackBehavior
     {
-        void quack();
+        public void quack()
+        {
+            Console.WriteLine("Squeak");
+        }
     }
 }

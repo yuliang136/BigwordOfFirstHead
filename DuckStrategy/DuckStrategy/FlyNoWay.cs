@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace DuckStrategy
 {
-    public interface IQuackBehavior
+    class FlyNoWay:IFlyBehavior
     {
-        void quack();
+        public void fly()
+        {
+            Console.WriteLine("No fly");
+        }
     }
 }

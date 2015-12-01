@@ -9,11 +9,11 @@ namespace BossBackIKnowObserverMode
     public abstract class Observer
     {
         protected string _strName;
-        protected Secretary _subjectSecretary;
+        protected ISubject _iSubject;
 
-        protected Observer(Secretary subjectSecretary, string strName)
+        protected Observer(ISubject iSubject, string strName)
         {
-            _subjectSecretary = subjectSecretary;
+            _iSubject = iSubject;
             _strName = strName;
         }
 

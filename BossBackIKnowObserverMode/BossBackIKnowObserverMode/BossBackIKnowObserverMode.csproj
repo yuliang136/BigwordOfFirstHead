@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boss.cs" />
+    <Compile Include="ISubject.cs" />
     <Compile Include="NBAObserver.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="Program.cs" />

@@ -6,18 +6,23 @@ using System.Threading.Tasks;
 
 namespace BossBackIKnowObserverMode
 {
-    class Secretary
+    public class Secretary
     {
-        private List<StockObserver> _ltObservers = new List<StockObserver>();
+        private List<Observer> _ltObservers = new List<Observer>();
         private string _strAction;
 
         /// <summary>
         /// 添加 这里针对具体类做了设计，如果有其他类型的监听者时会有问题.
         /// </summary>
         /// <param name="observer"></param>
-        public void Attach(StockObserver observer)
+        public void Attach(Observer observer)
         {
             _ltObservers.Add(observer);
+        }
+
+        public void Detach(Observer observer)
+        {
+            _ltObservers.Remove(observer);
         }
 
         /// <summary>
@@ -25,7 +30,7 @@ namespace BossBackIKnowObserverMode
         /// </summary>
         public void Notify()
         {
-            foreach (StockObserver o in _ltObservers)
+            foreach (Observer o in _ltObservers)
             {
                 o.Update();
             }

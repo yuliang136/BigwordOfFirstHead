@@ -14,8 +14,8 @@ namespace BossBackIKnowObserverMode
             Secretary tongzizhe = new Secretary();
 
             // 在Observer端保留了一个Subject,拿取状态 这里会有问题.
-            StockObserver tongshi1 = new StockObserver("Wei", tongzizhe);
-            StockObserver tongshi2 = new StockObserver("Yi", tongzizhe);
+            StockObserver tongshi1 = new StockObserver(tongzizhe,"Wei");
+            StockObserver tongshi2 = new StockObserver(tongzizhe,"Yi");
 
             tongzizhe.Attach(tongshi1);
             tongzizhe.Attach(tongshi2);

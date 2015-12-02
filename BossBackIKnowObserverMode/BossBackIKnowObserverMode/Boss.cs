@@ -6,21 +6,30 @@ using System.Threading.Tasks;
 
 namespace BossBackIKnowObserverMode
 {
-    class Boss
+    class Boss : ISubject
     {
-        // 定义一个委托类型. 无返回值 无参数
-        public delegate void MyEventHandler();
+        public delegate void YLEventHandler();
+
+        public YLEventHandler _Update;
+
+        public string SubjectState
+        {
+            get { return null; }
+            set { }
+        }
+
+        public Action ActionNotify { get; set; }
 
         // 声明一个委托.
-        public MyEventHandler _eventUpdate;
+
 
         public void Notify()
         {
-            if (_eventUpdate != null)
+            if (ActionNotify != null)
             {
-                _eventUpdate();
+                ActionNotify();
             }
-            
+
         }
 
         //private List<Observer> _ltObservers = new List<Observer>();

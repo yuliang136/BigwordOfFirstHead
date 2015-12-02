@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace BossBackIKnowObserverMode
 {
+    // delegate void MyEventHandler();
+
+    /// <summary>
+    /// 做一个规范性接口，但是没有拿来做多态用.
+    /// </summary>
     public interface ISubject
     {
-        void Attach(Observer observer);
-        void Detach(Observer observer);
+        Action ActionNotify
+        {
+            get; 
+            set; 
+        }
+
         void Notify();
 
         string SubjectState

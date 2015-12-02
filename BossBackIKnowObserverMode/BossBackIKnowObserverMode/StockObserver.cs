@@ -8,22 +8,15 @@ namespace BossBackIKnowObserverMode
 {
     public class StockObserver
     {
-        //public StockObserver(ISubject iSubject, string strName) : base(iSubject, strName)
-        //{
-        //}
-
-        //public override void Update()
-        //{
-        //    Console.WriteLine("{0} {1} 关闭股票航行，继续工作！ ",
-        //                        _iSubject.SubjectState,_strName);
-        //}
-
-        //private string _strName;
-        //private I
+        private string _strName;
+        public StockObserver(string strName)
+        {
+            _strName = strName;
+        }
 
         public void CloseStockMarket()
         {
-            Console.WriteLine("CloseStockMarket");
+            Console.WriteLine("{0} 关闭股票行情, 继续工作", _strName);
         }
     }
 }

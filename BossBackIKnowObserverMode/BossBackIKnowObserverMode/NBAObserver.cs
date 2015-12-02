@@ -6,27 +6,18 @@ using System.Threading.Tasks;
 
 namespace BossBackIKnowObserverMode
 {
-    class NBAObserver:Observer
+    class NBAObserver
     {
-        public NBAObserver(ISubject iSubject, string strName) : base(iSubject, strName)
+        private string _strName;
+        public NBAObserver(string strName)
         {
+            _strName = strName;
         }
 
-        public override void Update()
+        public void CloseNBADirectSeeding()
         {
-            Console.WriteLine("{0} {1} 关闭NBA直播，继续工作！ ",
-                    _iSubject.SubjectState,_strName);
+            Console.WriteLine("{0}关闭NBA直播，继续工作", _strName);
         }
 
-        //public NBAObserver(Secretary subjectSecretary, string strName) : base(subjectSecretary, strName)
-        //{
-        //}
-
-        //public override void Update()
-        //{
-        //    Console.WriteLine("{0} {1} 关闭NBA直播，继续工作！ ",
-        //            _subjectSecretary.SecretaryAction,
-        //            _strName);
-        //}
     }
 }

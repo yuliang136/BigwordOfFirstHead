@@ -8,32 +8,50 @@ namespace BossBackIKnowObserverMode
 {
     public class Secretary : ISubject
     {
-        private List<Observer> _ltObservers = new List<Observer>();
-        private string _strAction;
+        private Action _actionNotify;
 
         public string SubjectState
         {
-            get { return _strAction; }
-            set { _strAction = value; }
+            get { return null; }
+            set { }
         }
+
+        public Action ActionNotify { get; set; }
 
         public void Notify()
         {
-            foreach (Observer o in _ltObservers)
+            if (ActionNotify != null)
             {
-                o.Update();
+                ActionNotify();
             }
         }
 
-        public void Detach(Observer observer)
-        {
-            _ltObservers.Remove(observer);
-        }
+        //private List<Observer> _ltObservers = new List<Observer>();
+        //private string _strAction;
 
-        public void Attach(Observer observer)
-        {
-            _ltObservers.Add(observer);
-        }
+        //public string SubjectState
+        //{
+        //    get { return _strAction; }
+        //    set { _strAction = value; }
+        //}
+
+        //public void Notify()
+        //{
+        //    foreach (Observer o in _ltObservers)
+        //    {
+        //        o.Update();
+        //    }
+        //}
+
+        //public void Detach(Observer observer)
+        //{
+        //    _ltObservers.Remove(observer);
+        //}
+
+        //public void Attach(Observer observer)
+        //{
+        //    _ltObservers.Add(observer);
+        //}
 
         ///// <summary>
         ///// 添加 这里针对具体类做了设计，如果有其他类型的监听者时会有问题.

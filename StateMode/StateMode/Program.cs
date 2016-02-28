@@ -10,10 +10,15 @@ namespace StateMode
     {
         static void Main(string[] args)
         {
-            int nHour = 16;
+            //int nHour = 16;
 
-            Work work = new Work();
-            work.RunProgram(nHour,true);
+            //Work work = new Work();
+            //work.RunProgram(nHour,true);
+
+            Work emergencyProjects = new Work();
+            emergencyProjects.Hour = 16;
+            emergencyProjects.Finish = false;
+            emergencyProjects.WriteProgram();
         }
     }
 }

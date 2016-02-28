@@ -6,47 +6,43 @@ using System.Threading.Tasks;
 
 namespace StateMode
 {
-    class Work
+    public class Work
     {
-        public int _nHour;
-        public bool _bWorkFinished = false;
+        private State _current;
 
-        public void RunProgram(int nHour, bool bWorkFinished)
+        public Work()
         {
-            _nHour = nHour;
-            _bWorkFinished = bWorkFinished;
-
-            if (_nHour < 12)
-            {
-                Console.WriteLine("当前时间：{0}点 上午工作，精神百倍",_nHour);
-            }
-            else if(_nHour <13)
-            {
-                Console.WriteLine("当前时间：{0}午休", _nHour);
-            }
-            else if (_nHour < 17)
-            {
-                Console.WriteLine("当前时间：{0}点, 下午状态还不错 继续努力", _nHour);
-            }
-            else // Time >= 17
-            {
-                if (_bWorkFinished)
-                {
-                    Console.WriteLine("当前时间：{0}点, 下班回家了", _nHour);
-                }
-                else
-                {
-                    // 继续工作
-                    if (_nHour < 21)
-                    {
-                        Console.WriteLine("当前时间：{0}加班哦，疲累之极", _nHour);
-                    }
-                    else
-                    {
-                        Console.WriteLine("当前时间：{0}不行了 睡着了", _nHour);
-                    }
-                }
-            }
+            _current = new ForenoonState();
         }
+
+        private double _dHour;
+        public double Hour
+        {
+            get { return _dHour; }
+            set { _dHour = value; }
+        }
+
+        private bool _bFinish = false;
+        public bool Finish
+        {
+            get { return _bFinish; }
+            set { _bFinish = value; }
+        }
+
+        /// <summary>
+        /// 设置状态.
+        /// </summary>
+        /// <param name="s">设置的新状态.</param>
+        public void SetState(State s)
+        {
+            _current = s;
+        }
+
+        public void WriteProgram()
+        {
+            // 把Work对象传递到具体的状态类里做处理.
+            _current.WriteProgram(this);
+        }
+
     }
 }
